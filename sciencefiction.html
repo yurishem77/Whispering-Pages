@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>WHISPERING PAGES | HORROR</title>
+<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap@5strap.min.css" rel="stylesheet">
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+<header>
+<h1>Whispering Pages - SCIENCE FICTION </h1>
+<p class = "tagline">Tomorrow is already watchinh us</p>
+
+<div class="search-container p-3 bg-light">
+        <form class="search-form d-flex" onsubmit="return false;">
+            <input type="text" placeholder="Search books, authors, genres..." class="search-input form-control me-2" id="bookSearch" onkeyup="filterBooks()">
+            <button type="submit" class="search-button btn btn-primary"> Search </button>
+        </form>
+    </div>
+
+<nav>
+<a href = "index.html">Home</a>
+<a href = "genres.html">Genres</a>
+<a href = "cart.html">Cart</a>
+<a href = "membership.html">Membership</a><br><br>
+<a href = "login.html">Login</a><br><br>
+<p class="text-center mb-4">
+🛒Cart Items:<span id="cartCount">0</span>
+</p>
+</nav>
+</header>
+<body>
+
+<div class= "sciencefiction">
+<div class="container mt-5">
+
+<div class="row g-4">
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc1.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE MARTIAN</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE MARTIAN')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE MARTIAN')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc2.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">IDENTITY THEFT</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('IDENTITY THEFT')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('IDENTITY THEFT')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc3.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">INHIBITOR PHASE</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('INHIBITOR PHASE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('INHIBITOR PHASE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc4.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">MACHINE VENDETTA</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('MACHINE VENDETTA')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc5.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THEFT OF FIRE</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THEFT OF FIRE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THEFT OF FIRE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc6.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE DISTURBANCE</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE DISTURBANCE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE DISTURBANCE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc8.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">COLD EYES</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('COLD EYES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc9.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">GALAXIAS</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('GALAXIAS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('GALAXIAS')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc10.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DARKOME</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('DARKOME')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('DARKOME')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc11.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">CORVUS</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('CORVUS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('CORVUS')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc12.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">FIRE AND SONG</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('FIRE AND SONG')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('FIRE AND SONG')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc13.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ENDER'S GAME</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('ENDER'S GAME')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('ENDER'S GAME')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc14.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">1984</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('1984')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('1984')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc15.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">FAHRENHEIT</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('FAHRENHEIT')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('FAHRENHEIT')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc16.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ALL SYSTEMS RED</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('ALL SYSTEMS RED')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('ALL SYSTEMS RED')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc17.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE HUNGER GAMES</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE HUNGER GAMES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE HUNGER GAMES')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc18.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THIS BRUTAL MOON</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THIS BRUTAL MOON')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THIS BRUTAL MOON')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc19.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ORIGINSGEIGER</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('ORIGINSGEIGER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('ORIGINSGEIGER')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc20.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">GEIGER</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('GEIGER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('GEIGER')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc21.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE POPPY FIELDS</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE POPPY FIELDS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE POPPY FIELDS')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc22.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">WARP RINSE REPEAT</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('WARP RINSE REPEAT')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('WARP RINSE REPEAT')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc23.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">FUGITIVE TELEMETRY</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('FUGITIVE TELEMETRY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('FUGITIVE TELEMETRY')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc24.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">MICKEY 7</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('MICKEY 7')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('MICKEY 7')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc25.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ASHES</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('ASHES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('ASHES')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc26.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">SEA OF TRANQUILITY</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('SEA OF TRANQUILITY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('SEA OF TRANQUILITY')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc27.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">LEVIATHAN FALLS</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('LEVIATHAN FALLS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('LEVIATHAN FALLS')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc28.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ANNIE BOT</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('ANNIE BOT')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('ANNIE BOT')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc30.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DUNE</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('DUNE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('DUNE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc31.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">HAIL MARY</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('HAIL MARY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('HAIL MARY')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sc29.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">MAKING SPACE</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('MAKING SPACE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('MAKING SPACE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<script>
+	
+	let isLoggedIn = false;
+	let cartCount = 0;
+	let cartItems = [];
+	
+	const books = [
+	{title: "WE WHO WILL DIE", author: "Stacia Stark", genre: "Fantasy"},
+	{title: "AN ARCANE INHERITANCE", author: "Kamilah Cole", genre: "Fantasy"},
+	{title: "CANTICLE", author: "Janet Rich Edwards", genre: "Fantasy"},
+	{title: "TAILORED REALITIES", author: "Brandon Sanderson", genre: "Fantasy"},
+	{title: "PERSEPHONE'S CURSE", author: "Katrina Leno", genre: "Fantasy"},
+	{title: "SOMETHING WICKED", author: "Falon Ballard", genre: "Fantasy"}
+	];
+	
+	function addToCart(bookName){
+	if(!isLoggedIn){
+	alert("You must login first to add items to the cart!");
+	return;
+	}
+	
+	cartCount++;
+	cartItems.push(bookName);
+	document.getElementById("cartCount").innerText = cartCount;
+	document.getElementById("navCartCount").innerText = cartCount;
+	alert(bookName + " has been added to your cart!");
+	}
+	function viewBook(bookName){
+	alert("Viewing details for: " + bookName);
+	}
+	
+	function filterBooks(){
+	const query = document.getElementById("bookSearch").value.toLowerCase();
+	const rows = document.querySelectorAll(".fantasy .row > div");
+	
+	rows.forEach((row,index)=>{
+	const book = books[index];
+	if(
+	book.title.toLowerCase().includes(query) ||
+	book.author.toLowerCase().includes(query) ||
+	book.genre.toLowerCase().includes(query) 
+	){
+	row.style.display = "block";
+	} else {
+	row.style.display = "none";
+	}
+	});
+	}
+	</script>
+	
+	</body>
+	</html>

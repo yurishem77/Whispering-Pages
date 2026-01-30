@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WHISPERING PAGES | LOGIN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login">
+<header>
+<h1>Whispering Pages</h1>
+<p class="tagline">A cozy place where stories whisper and dreams begin</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="membership.html">Membership</a>
+<a href="register.html">Register</a>
+<a href="login.html">Login</a>
+<a href="genres.html">Genres</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<h2>Welcome to Login Page</h2>
+<p class="intro">Log in to access your personalised bookshelf, saved favorites and member benefits.</p>
+
+<div class="card register-card">
+<form class="register-form">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    
+    <button type="submit">Login</button>
+    <p id="loginMessage" class="message"></p> 
+</form>
+</div>
+<p class="note"><em>Not a member yet? <a href="register.html">Create an account</a></em></p>
+</section>
+
+<footer><p>© 2025 Whispering Pages</p></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.querySelector(".register-form");
+    
+    loginForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("loginMessage");
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+            message.style.color = "green";
+            message.textContent = "Login successful! Redirecting...";
+            
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('username', user.username);
+            localStorage.setItem('userEmail', user.email);
+            
+            console.log("Login successful! Storing:", {
+                isLoggedIn: 'true',
+                username: user.username,
+                email: user.email
+            });
+            
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 1500);
+        } else {
+            message.style.color = "red";
+            message.textContent = "Invalid email or password.";
+            console.log("Login failed. Users in localStorage:", users);
+        }
+    });
+    
+    if(localStorage.getItem('isLoggedIn') === 'true') {
+        console.log("Already logged in as:", localStorage.getItem('username'));
+        window.location.href = "index.html";
+    }
+    
+    window.debugLocalStorage = function() {
+        console.log("=== DEBUG LOCALSTORAGE ===");
+        console.log("isLoggedIn:", localStorage.getItem('isLoggedIn'));
+        console.log("username:", localStorage.getItem('username'));
+        console.log("userEmail:", localStorage.getItem('userEmail'));
+        console.log("users:", JSON.parse(localStorage.getItem("users")));
+        alert("Check console for localStorage data");
+    };
+});
+</script>
+
+</body>
+</html>

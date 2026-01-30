@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>WHISPERING PAGES | REGISTER</title>
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body class = "register">
+<header>
+<h1>Whispering Pages</h1>
+<p class = "tagline">A cozy place where stories whisper and dreams begin</p>
+
+<nav>
+<a href = "index.html">Home</a>
+<a href = "about.html">About</a>
+<a href = "membership.html">Membership</a>
+<a href = "register.html">Register</a>
+<a href = "login.html">Login</a>
+<a href = "genres.html">Genres</a>
+<a href = "contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<h2> New User, Create Your Account</h2>
+<p class = "intro"> Join Whispering Pages to explore exclusive collections, personalized recommendations, and a welcoming reading community.</p>
+<div class = "card register-card">
+<form class = "register-form">
+<label for = "fullname"> <strong>Full Name</strong></label>
+<input type = "text" id = "fullname" name = "fullname" required>
+
+ <label for = "email"> <strong>Email</strong></label>
+<input type = "text" id = "email" name = "email" required>
+
+<label for = "username"> <strong>Username</strong></label>
+<input type = "text" id = "username" name = "username" required>
+
+<label for = "password"> <strong>Password</strong></label>
+<input type = "password" id = "password" name = "password" required>
+
+<label for = "confirm"> <strong>Confirm Password</strong></label>
+<input type = "password" id = "confirm" name = "confirm" required>
+
+<label for = "membership"> <strong>Membership</strong></label>
+<select id = "membership" name = "membership">
+<option value = "">Select membership type</option>
+<option>Standard Reader</option>
+<option>Premium Book Lover</option>
+<option>Collector's Circle</option>
+</select>
+<button type = "submit">Register</button>
+<p id = "registerMessage" class = "message"></p>
+</form>
+</div>
+<p class = "note"><em>By registering, you agree to be part of the Whispering Pages community.</em></p>
+</section>
+
+<footer><p>© 2025 Whispering Pages</p></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const registerForm = document.querySelector(".register-form");
+    
+registerForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const fullname = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+    const confirm = document.getElementById("confirm").value;
+    const membership = document.getElementById("membership").value;
+    const message = document.getElementById("registerMessage");
+
+    if (password !== confirm) {
+    message.style.color = "red";
+    message.textContent = "Passwords do not match.";
+    return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const emailExists = users.some(user => user.email === email);
+    if(emailExists) {
+    message.style.color = "red";
+    message.textContent = "An account with this email already exists.";
+    return;
+    }
+
+    const newUser = {
+    fullname,
+    email,
+    username,
+    password,
+    membership
+    };
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+    message.style.color = "green";
+    message.textContent = "Registration successful! Redirecting to login...";
+
+    setTimeout(() => {
+    window.location.href = "login.html";
+    }, 1500);
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>WHISPERING PAGES | KIDS SECTION</title>
+<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap@5strap.min.css" rel="stylesheet">
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+<header>
+<h1>Whispering Pages - Kids Section</h1>
+<p class = "tagline">Every day is an adventure when you're curious</p>
+
+<div class="search-container p-3 bg-light">
+        <form class="search-form d-flex" onsubmit="return false;">
+            <input type="text" placeholder="Search books, authors, genres..." class="search-input form-control me-2" id="bookSearch" onkeyup="filterBooks()">
+            <button type="submit" class="search-button btn btn-primary"> Search </button>
+        </form>
+    </div>
+
+<nav>
+<a href = "index.html">Home</a>
+<a href = "genres.html">Genres</a>
+<a href = "cart.html">Cart</a>
+<a href = "membership.html">Membership</a><br><br>
+<a href = "login.html">Login</a><br><br>
+<p class="text-center mb-4">
+🛒Cart Items:<span id="cartCount">0</span>
+</p>
+</nav>
+</header>
+<body>
+
+<div class= "kidssection">
+<div class="container mt-5">
+
+<div class="row g-4">
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks1.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THEE HUMBLE PIE</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THEE HUMBLE PIE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks3.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">XOLO</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('XOLO')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks4.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE SNOWBALL FIGHT</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE SNOWBALL FIGHT')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks5.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">FANNY'S BIG IDEA</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('FANNY'S BIG IDEA')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks6.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">WONKA</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('WONKA')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ts6.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">FRIENDS AND LIARS</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('FRIENDS AND LIARS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks7.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE SKULL</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('THE SKULL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks8.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">PARTYPOOPER</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('PARTYPOOPER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks9.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">KNIGHT OWL</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('KNIGHT OWL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks10.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DARKSTALKER</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('DARKSTALKER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks11.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">SNOOP</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('SNOOP')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks12.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DOG MAN</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('DOG MAN')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks13.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">I AM REBEL</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('I AM REBEL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks14.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ESCAPING PERIL</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('ESCAPING PERIL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks15.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ERIN HUNTER</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('ERIN HUNTER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks16.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">GREEN EGGS AND HAM</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('GREEN EGGS AND HAM')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks17.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE LITTLE PRINCE</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE LITTLE PRINCE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks18.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">MATILDA</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('MATILDA')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks19.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE SECRET GARDEN</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE SECRET GARDEN')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks20.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE GIVING TREE</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE GIVING TREE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks21.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">CHARLOTTE'S WEB</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('CHARLOTTE'S WEB')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks22.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">FORESTS</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('FORESTS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks23.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">GALAXY MAPPER</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('GALAXY MAPPER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks24.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">BANANA MENORAH</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('BANANA MENORAH')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks25.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE SNOW THIEF</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE SNOW THIEF')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks26.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE JOURNEY</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE JOURNEY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks27.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">LET'S BE BEES</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('LET'S BE BEES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks29.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">I AM NOT HAPPYTUCK ME IN</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('I AM NOT HAPPYTUCK ME IN')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks30.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">TUCK ME IN</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('TUCK ME IN')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ks31.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">CORDUROY</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('CORDUROY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<script>
+	
+	let isLoggedIn = false;
+	let cartCount = 0;
+	let cartItems = [];
+	
+	const books = [
+	{title: "WE WHO WILL DIE", author: "Stacia Stark", genre: "Fantasy"},
+	{title: "AN ARCANE INHERITANCE", author: "Kamilah Cole", genre: "Fantasy"},
+	{title: "CANTICLE", author: "Janet Rich Edwards", genre: "Fantasy"},
+	{title: "TAILORED REALITIES", author: "Brandon Sanderson", genre: "Fantasy"},
+	{title: "PERSEPHONE'S CURSE", author: "Katrina Leno", genre: "Fantasy"},
+	{title: "SOMETHING WICKED", author: "Falon Ballard", genre: "Fantasy"}
+	];
+	
+	function addToCart(bookName){
+	if(!isLoggedIn){
+	alert("You must login first to add items to the cart!");
+	return;
+	}
+	
+	cartCount++;
+	cartItems.push(bookName);
+	document.getElementById("cartCount").innerText = cartCount;
+	document.getElementById("navCartCount").innerText = cartCount;
+	alert(bookName + " has been added to your cart!");
+	}
+	function viewBook(bookName){
+	alert("Viewing details for: " + bookName);
+	}
+	
+	function filterBooks(){
+	const query = document.getElementById("bookSearch").value.toLowerCase();
+	const rows = document.querySelectorAll(".fantasy .row > div");
+	
+	rows.forEach((row,index)=>{
+	const book = books[index];
+	if(
+	book.title.toLowerCase().includes(query) ||
+	book.author.toLowerCase().includes(query) ||
+	book.genre.toLowerCase().includes(query) 
+	){
+	row.style.display = "block";
+	} else {
+	row.style.display = "none";
+	}
+	});
+	}
+	</script>
+	
+	</body>
+	</html>

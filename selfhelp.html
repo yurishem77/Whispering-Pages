@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>WHISPERING PAGES | SELF HELP</title>
+<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap@5strap.min.css" rel="stylesheet">
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+<header>
+<h1>Whispering Pages - Self Help </h1>
+<p class = "tagline">Every exit led deeper inside</p>
+
+<div class="search-container p-3 bg-light">
+        <form class="search-form d-flex" onsubmit="return false;">
+            <input type="text" placeholder="Search books, authors, genres..." class="search-input form-control me-2" id="bookSearch" onkeyup="filterBooks()">
+            <button type="submit" class="search-button btn btn-primary"> Search </button>
+        </form>
+    </div>
+
+<nav>
+<a href = "index.html">Home</a>
+<a href = "genres.html">Genres</a>
+<a href = "cart.html">Cart</a>
+<a href = "membership.html">Membership</a><br><br>
+<a href = "login.html">Login</a><br><br>
+<p class="text-center mb-4">
+🛒Cart Items:<span id="cartCount">0</span>
+</p>
+</nav>
+</header>
+<body>
+
+<div class= "selfhelp">
+<div class="container mt-5">
+
+<div class="row g-4">
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh1.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">COUNTDOWN TO RICHES</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('COUNTDOWN TO RICHES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh2.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">BECOMING AN ARTIST</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('BECOMING AN ARTIST')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh3.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">TIDYING THE ABYSS</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('TIDYING THE ABYSS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh4.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE ATOMIC HABITS WORKBOOK</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE ATOMIC HABITS WORKBOOK')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh5.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE LET THEM THEORY</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE LET THEM THEORY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh6.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THINK AGAIN</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THINK AGAIN')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh7.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DOPAMINE NATION</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('DOPAMINE NATION')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh8.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">PRACTICING THE WAY</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('PRACTICING THE WAY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh9.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE TELL</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE TELL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh10.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ATLAS OF THE HEART</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('ATLAS OF THE HEART')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh11.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ATOMIC HABITS</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('ATOMIC HABITS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh12.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE POWER OF HABIT</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('THE POWER OF HABIT')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh13.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DARING GREATLY</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook(DARING GREATLY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh14.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DEEP WORK</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('DEEP WORK')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh15.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">QUIET</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('QUIET')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh16.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE FOUR AGREEMENTS</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE FOUR AGREEMENTS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh17.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">YOU ARE A BADASS</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('YOU ARE A BADASS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh18.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">UNREASONABLE HOSPITALITY</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('UNREASONABLE HOSPITALITY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/sh20.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">CONVENT WISDOM</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('CONVENT WISDOM')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/ts19.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE GIFTS OF IMPERFECTION</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE GIFTS OF IMPERFECTION')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<script>
+	
+	let isLoggedIn = false;
+	let cartCount = 0;
+	let cartItems = [];
+	
+	const books = [
+	{title: "WE WHO WILL DIE", author: "Stacia Stark", genre: "Fantasy"},
+	{title: "AN ARCANE INHERITANCE", author: "Kamilah Cole", genre: "Fantasy"},
+	{title: "CANTICLE", author: "Janet Rich Edwards", genre: "Fantasy"},
+	{title: "TAILORED REALITIES", author: "Brandon Sanderson", genre: "Fantasy"},
+	{title: "PERSEPHONE'S CURSE", author: "Katrina Leno", genre: "Fantasy"},
+	{title: "SOMETHING WICKED", author: "Falon Ballard", genre: "Fantasy"}
+	];
+	
+	function addToCart(bookName){
+	if(!isLoggedIn){
+	alert("You must login first to add items to the cart!");
+	return;
+	}
+	
+	cartCount++;
+	cartItems.push(bookName);
+	document.getElementById("cartCount").innerText = cartCount;
+	document.getElementById("navCartCount").innerText = cartCount;
+	alert(bookName + " has been added to your cart!");
+	}
+	function viewBook(bookName){
+	alert("Viewing details for: " + bookName);
+	}
+	
+	function filterBooks(){
+	const query = document.getElementById("bookSearch").value.toLowerCase();
+	const rows = document.querySelectorAll(".fantasy .row > div");
+	
+	rows.forEach((row,index)=>{
+	const book = books[index];
+	if(
+	book.title.toLowerCase().includes(query) ||
+	book.author.toLowerCase().includes(query) ||
+	book.genre.toLowerCase().includes(query) 
+	){
+	row.style.display = "block";
+	} else {
+	row.style.display = "none";
+	}
+	});
+	}
+	</script>
+	
+	</body>
+	</html>

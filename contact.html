@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>WHISPERING PAGES | CONTACT</title>
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body class = "contact">
+<header>
+<h1>Whispering Pages</h1>
+<p class = "tagline">A cozy place where stories whisper and dreams begin</p>
+
+<nav>
+<a href = "index.html">Home</a>
+<a href = "about.html">About</a>
+<a href = "membership.html">Membership</a>
+<a href = "register.html">Register</a>
+<a href = "login.html">Login</a>
+<a href = "genres.html">Genres</a>
+<a href = "contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<h2>Contact Us</h2>
+<p class = "intro">
+Have a question, suggestion, or just want to say hello? We'd love to hear from you</p>
+
+<div class = "card contact-card">
+<form id = "contactForm">
+<label for ="name"><strong>Full Name</strong></label>
+<input type="text" id="name" required>
+<label for ="email"><strong>Email Address</strong></label>
+<input type="email" id="email" required>
+<label for ="subject"><strong>Subject</strong></label>
+<input type="text" id="subject" required>
+<label for ="message"><strong>Message</strong></label>
+<textarea id="message" rows="5" required></textarea>
+<button type = "submit">Send Message</button>
+</form>
+
+<p id = "successMessage" class "note" style= "display:none;">
+<em>Thank you for reaching out! We'll get back to you soon.</em>
+</p>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Whispering Pages<p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+e.preventDefault();
+document.getElementById("successMessage").style.display = "block";
+this.reset();
+});
+</script>
+</body>
+</html>

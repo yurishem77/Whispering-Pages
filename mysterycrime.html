@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>WHISPERING PAGES | MYSTERY/CRIME</title>
+<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap@5strap.min.css" rel="stylesheet">
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+<header>
+<h1>Whispering Pages - Mystery/Crime </h1>
+<p class = "tagline">The truth didn't hide-It waited</p>
+
+<div class="search-container p-3 bg-light">
+        <form class="search-form d-flex" onsubmit="return false;">
+            <input type="text" placeholder="Search books, authors, genres..." class="search-input form-control me-2" id="bookSearch" onkeyup="filterBooks()">
+            <button type="submit" class="search-button btn btn-primary"> Search </button>
+        </form>
+    </div>
+
+<nav>
+<a href = "index.html">Home</a>
+<a href = "genres.html">Genres</a>
+<a href = "cart.html">Cart</a>
+<a href = "membership.html">Membership</a><br><br>
+<a href = "login.html">Login</a><br><br>
+<p class="text-center mb-4">
+🛒Cart Items:<span id="cartCount">0</span>
+</p>
+</nav>
+</header>
+<body>
+
+<div class= "mysterycrime">
+<div class="container mt-5">
+
+<div class="row g-4">
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc1.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE GIRL WITH THE DRAGON TATTOO</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE GIRL WITH THE DRAGON TATTOO')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE GIRL WITH THE DRAGON TATTOO')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc2.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">GONE GIRL</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('GONE GIRL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('GONE GIRL')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc3.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE SILENT PATIENT></h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE SILENT PATIENT')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE SILENT PATIENT')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc4.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">A GOOD GIRL'S GUIDE TO MURDER</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('A GOOD GIRL'S GUIDE TO MURDER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('A GOOD GIRL'S GUIDE TO MURDER)">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc5.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">HIDDEN PICTURES</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('HIDDEN PICTURES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('HIDDEN PICTURES')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc6.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">RIVER IS WAITING</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('RIVER IS WAITING')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('RIVER IS WAITING')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc7.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE WIDOW</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('THE WIDOW')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE WIDOW')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc8.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">BEAUTIFUL UGLY</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('BEAUTIFUL UGLY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('BEAUTIFUL UGLY')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc9.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">LOCAL WOMAN MISSING</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('LOCAL WOMAN MISSING')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('LOCAL WOMAN MISSING')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc10.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">DON'T LET HIM IN</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('DON'T LET HIM IN')">View</button>
+	<button class="btn btn-cart" onclick="addToCart()">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc12.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE GALLAGHER PLACE</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('THE GALLAGHER PLACE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE GALLAGHER PLACE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc13.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">WATCH US FALL</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('WATCH US FALL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('WATCH US FALL')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc14.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE HOUSEMAID'S SECRET</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('THE HOUSEMAID'S SECRET')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE HOUSEMAID'S SECRET')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc15.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE MAID</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE MAID')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE MAID')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc16.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE LOST APOTHECARY</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE LOST APOTHECARY')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE LOST APOTHECARY')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc17.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE MAIDENS</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE MAIDENS')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE MAIDENS')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc18.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">APPLES NEVER FALL</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('APPLES NEVER FALL')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('APPLES NEVER FALL')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc19.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE BLACK WOLF</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE BLACK WOLF')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE BLACK WOLF')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc20.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE WATER LIES</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE WATER LIES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE WATER LIES')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc21.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">NO ONE KNEWh5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('NO ONE KNEW')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('NO ONE KNEW')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc22.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE FIXTHE GUEST LIST</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE FIXTHE GUEST LIST')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE FIXTHE GUEST LIST')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc23.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE GUEST LIST</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE GUEST LIST')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE GUEST LIST')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc24.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">THE INHERITANCE GAMES</h5><p>Rs 650</p>
+	<button class="btn btn-view" onclick="viewBook('THE INHERITANCE GAMES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('THE INHERITANCE GAMES')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc25.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">CRIME RANGOON</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('CRIME RANGOON')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('CRIME RANGOON')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc26.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">ALL MY BONES</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('ALL MY BONES')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('ALL MY BONES')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc27.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">SEVEN ALL ALONE</h5><p>Rs 500</p>
+	<button class="btn btn-view" onclick="viewBook('SEVEN ALL ALONE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('SEVEN ALL ALONE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc29.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">NEEDLE LAKE</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('NEEDLE LAKE')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('NEEDLE LAKE')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+	<div class="card">
+	<img src="Images/mc28.png" class="card-img-top book-image" alt="Book">
+	<div class ="card-body">
+	<h5 class="card-title">CAPE FEVER</h5><p>Rs 700</p>
+	<button class="btn btn-view" onclick="viewBook('CAFE FEVER')">View</button>
+	<button class="btn btn-cart" onclick="addToCart('CAFE FEVER')">Add to Cart</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<script>
+	
+	let isLoggedIn = false;
+	let cartCount = 0;
+	let cartItems = [];
+	
+	const books = [
+	{title: "WE WHO WILL DIE", author: "Stacia Stark", genre: "Fantasy"},
+	{title: "AN ARCANE INHERITANCE", author: "Kamilah Cole", genre: "Fantasy"},
+	{title: "CANTICLE", author: "Janet Rich Edwards", genre: "Fantasy"},
+	{title: "TAILORED REALITIES", author: "Brandon Sanderson", genre: "Fantasy"},
+	{title: "PERSEPHONE'S CURSE", author: "Katrina Leno", genre: "Fantasy"},
+	{title: "SOMETHING WICKED", author: "Falon Ballard", genre: "Fantasy"}
+	];
+	
+	function addToCart(bookName){
+	if(!isLoggedIn){
+	alert("You must login first to add items to the cart!");
+	return;
+	}
+	
+	cartCount++;
+	cartItems.push(bookName);
+	document.getElementById("cartCount").innerText = cartCount;
+	document.getElementById("navCartCount").innerText = cartCount;
+	alert(bookName + " has been added to your cart!");
+	}
+	function viewBook(bookName){
+	alert("Viewing details for: " + bookName);
+	}
+	
+	function filterBooks(){
+	const query = document.getElementById("bookSearch").value.toLowerCase();
+	const rows = document.querySelectorAll(".fantasy .row > div");
+	
+	rows.forEach((row,index)=>{
+	const book = books[index];
+	if(
+	book.title.toLowerCase().includes(query) ||
+	book.author.toLowerCase().includes(query) ||
+	book.genre.toLowerCase().includes(query) 
+	){
+	row.style.display = "block";
+	} else {
+	row.style.display = "none";
+	}
+	});
+	}
+	</script>
+	
+	</body>
+	</html>

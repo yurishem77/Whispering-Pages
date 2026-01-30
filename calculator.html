@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHISPERING PAGES | CALCULATOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Whispering Pages - Calculator</h1>
+    <p class="tagline">Calculate your book purchases</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="genres.html">Genres</a>
+        <a href="cart.html">Cart</a>
+        <a href="calculator.html" class="active-nav">Calculator</a>
+        <a href="membership.html">Membership</a><br><br>
+        <a href="login.html">Login</a><br><br>
+    </nav>
+</header>
+
+<div class="container calculator-container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+        <div class="calculator-box">
+        <div class="calculator-header">
+            <h2>Book Price Calculator</h2>
+            <p class="text-muted">Calculate costs for your book purchases</p>
+            </div>
+                
+                <div class="calculator-display" id="display">0</div>
+                
+                <div class="calculator-buttons">
+                    <button class="calc-btn clear-btn" onclick="clearDisplay()">C</button>
+                    <button class="calc-btn backspace-btn" onclick="backspace()">⌫</button>
+                    <button class="calc-btn operator-btn" onclick="appendOperator('/')">/</button>
+                    <button class="calc-btn operator-btn" onclick="appendOperator('*')">×</button>
+                    
+                    <button class="calc-btn number-btn" onclick="appendNumber('7')">7</button>
+                    <button class="calc-btn number-btn" onclick="appendNumber('8')">8</button>
+                    <button class="calc-btn number-btn" onclick="appendNumber('9')">9</button>
+                    <button class="calc-btn operator-btn" onclick="appendOperator('-')">-</button>
+                    
+                    <button class="calc-btn number-btn" onclick="appendNumber('4')">4</button>
+                    <button class="calc-btn number-btn" onclick="appendNumber('5')">5</button>
+                    <button class="calc-btn number-btn" onclick="appendNumber('6')">6</button>
+                    <button class="calc-btn operator-btn" onclick="appendOperator('+')">+</button>
+                    
+                    <button class="calc-btn number-btn" onclick="appendNumber('1')">1</button>
+                    <button class="calc-btn number-btn" onclick="appendNumber('2')">2</button>
+                    <button class="calc-btn number-btn" onclick="appendNumber('3')">3</button>
+                    <button class="calc-btn cart-link" onclick="goToCart()">🛒</button>
+                    
+                    <button class="calc-btn number-btn" onclick="appendNumber('0')">0</button>
+                    <button class="calc-btn number-btn" onclick="appendDecimal()">.</button>
+                    <button class="calc-btn equals-btn" onclick="calculate()">=</button>
+					</div>
+                
+					<div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <button class="btn btn-outline-primary w-100" onclick="quickCalculate(500, 1)">
+                            Book (Rs 500)
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-primary w-100" onclick="quickCalculate(650, 1)">
+                            Book (Rs 650)
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-primary w-100" onclick="quickCalculate(700, 1)">
+                            Book (Rs 700)
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-primary w-100" onclick="quickCalculate(100, 1)">
+                            Shipping
+                        </button>
+                    </div>
+					</div>
+               
+                <div class="calculation-history">
+                    <h6>Calculation History</h6>
+                    <div id="history"></div>
+                </div>
+				</div>
+            
+				<div class="alert alert-info mt-3">
+                <h6>How to use:</h6>
+                <ol class="mb-0">
+                    <li>Click numbers and operators to calculate</li>
+                    <li>Use quick buttons for common book prices</li>
+                    <li>C = Clear, ⌫ = Backspace</li>
+                    <li>🛒 = Go to Shopping Cart</li>
+                </ol>
+            </div>
+			</div>
+        
+			<div class="col-lg-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Book Price Guide</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Common Book Prices:</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Standard Books: <strong>Rs 500</strong></li>
+                        <li class="mb-2">Premium Books: <strong>Rs 650</strong></li>
+                        <li class="mb-2">Special Editions: <strong>Rs 700</strong></li>
+                        <li class="mb-2">Shipping: <strong>Rs 100</strong></li>
+                        <li class="mb-2">Free shipping on orders over Rs 2000</li>
+                    </ul>
+                    
+                    <h6>Example Calculation:</h6>
+                    <div class="bg-light p-2 rounded mb-3">
+                        <small>2 books × Rs 500 = Rs 1000<br>
+                        + Shipping Rs 100 = Rs 1100<br>
+                        + Tax 5% = Rs 55<br>
+                        Total = Rs 1155</small>
+                    </div>
+                    
+                    <a href="cart.html" class="btn btn-success w-100 mt-2">
+                        View Your Cart
+                    </a>
+        </div>
+        </div>
+        </div>
+</div>
+</div>
+
+<footer>
+    <p>© 2025 Whispering Pages | <a href="contact.html">Contact Us</a></p>
+</footer>
+
+<script src="cart.js"></script>
+</body>
+</html>
