@@ -2481,6 +2481,14 @@ footer a:hover {
     margin-top: 2rem;
 }
 
+h2{
+    color:#000;
+}
+
+h6{
+    color: #000;
+}
+
 .calculator-header {
     text-align: center;
     margin-bottom: 2rem;
